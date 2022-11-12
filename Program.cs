@@ -45,13 +45,13 @@ void SortRowToLower(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            for (int k = 0; k < matrix.GetLength(1) - 1; k++)
+            for (int x = 0; x < matrix.GetLength(1) - 1; x++)
             {
-                if (matrix[i, k] < matrix[i, k+1])
+                if (matrix[i, x] < matrix[i, x+1])
                 {
-                    int temp = matrix[i, k+1];
-                    matrix[i, k+1] = matrix[i, k];
-                    matrix[i, k] = temp;
+                    int temp = matrix[i, x+1];
+                    matrix[i, x+1] = matrix[i, x];
+                    matrix[i, x] = temp;
                 }
             }
         }
